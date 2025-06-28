@@ -2,19 +2,22 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\Middleware\TrustProxies as Middleware; // Laravel ≥9
 
-class TrustProxies
+class TrustProxies extends Middleware
 {
     /**
-     * Handle an incoming request.
+     * Semua proxy (Railway, Cloudflare, dll).
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @var array|string|null
      */
-    public function handle(Request $request, Closure $next): Response
-    {
-        return $next($request);
-    }
+    protected $proxies = '*';
+
+    /**
+     * Gunakan header X-Forwarded-Proto supaya Laravel tahu request aslinya HTTPS.
+     *
+     * @var int
+     */
+    protected $headers = Request::HEADER_X_FORWARDED_PROTO;
 }
