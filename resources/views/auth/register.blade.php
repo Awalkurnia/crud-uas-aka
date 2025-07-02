@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi Akun</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <style>
@@ -121,9 +121,9 @@
         }
     </style>
 </head>
-<body style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('assets/bg1.jpg') }}') no-repeat center center fixed; background-size: cover;">
+<body style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ secure_asset('assets/bg1.jpg') }}') no-repeat center center fixed; background-size: cover;">
     <div class="register-box">
-        <img src="{{ asset('assets/image/logo2.jpg') }}" alt="Logo" class="logo-register">
+        <img src="{{ secure_asset('assets/image/logo2.jpg') }}" alt="Logo" class="logo-register">
         <h4><i class="bi bi-person-plus-fill me-2"></i>Registrasi Akun</h4>
 
         @if(session('error'))
@@ -171,7 +171,7 @@
         </form>
     </div>
 
-    <script src="{{ asset('assets/jquery-3.6.1.js') }}"></script>
-    <script src="{{ asset('assets/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('assets/jquery-3.6.1.js') }}"></script>
+    <script src="{{ secure_asset('assets/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
