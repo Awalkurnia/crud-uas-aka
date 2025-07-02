@@ -25,7 +25,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         if ($user && password_verify($request->password, $user->password)) {
             Auth::login($user);
-            return redirect()->route('mahasiswa')->with('success', 'Login berhasil');
+            return redirect()->route('jadwal_live_streaming')->with('success', 'Login berhasil');
         }
 
         return redirect()->back()->withErrors(['email' => 'Email atau password salah'])->withInput();
@@ -57,6 +57,6 @@ class AuthController extends Controller
         ]);
 
         Auth::login($user);
-        return redirect()->route('mahasiswa')->with('success', 'Registrasi berhasil');
+        return redirect()->route('jadwal_live_streaming')->with('success', 'Registrasi berhasil');
     }
 }

@@ -1,8 +1,8 @@
-<?Php
+<?php
 
-use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\JadwalLiveStreamingController;
 use illuminate\Support\Facades\Route;
 
-Route::apiResource('/mahasiswa', MahasiswaController::class);
+Route::apiResource('/jadwal-live-streaming', JadwalLiveStreamingController::class);
 
 ?>

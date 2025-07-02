@@ -17,9 +17,9 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     });
 
-    Route::get('/mahasiswa', function () {
-        return view('mahasiswa');
-    })->name('mahasiswa');
+    Route::get('/jadwal-live-streaming', function () {
+        return view('jadwal_live_streaming');
+    })->name('jadwal_live_streaming');
 
     // ✅ Hanya satu route logout, menggunakan metode POST
     Route::post('/logout', function () {

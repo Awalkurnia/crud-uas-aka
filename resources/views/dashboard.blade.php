@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h3>Dashboard</h3>
-    <p>Selamat Datang Di sistem informasi data mahasiswa. silakan pilih menu di sebelah kiri untuk mengelola data mahasiswa</p>
+    <h5>Selamat Datang Di Jadwal Live Streaming Awalkurnia</h5>
+    <p>“Lihat dan pantau jadwal live terkini dengan mudah!”</p>
     
 @endsection
